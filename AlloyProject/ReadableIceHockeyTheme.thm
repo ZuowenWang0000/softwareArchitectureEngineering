@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view>
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <type name="EliminationRound"/>
+   <type name="IceHockeyTeam"/>
+   <type name="Int"/>
+   <type name="String"/>
+   <type name="WomensIceHockeyTournament"/>
+   <type name="seq/Int"/>
+   <type name="GeneralPart/ordering/Ord"/>
+   <set name="$static_instance_6_s" type="GeneralPart/Phase"/>
+   <set name="$static_instance_6_s&apos;" type="GeneralPart/Phase"/>
+</node>
+
+<node color="Black">
+   <type name="GeneralPart/Performance"/>
+</node>
+
+<node color="Blue">
+   <type name="GeneralPart/Event"/>
+</node>
+
+<node color="Gray">
+   <type name="GeneralPart/Team"/>
+</node>
+
+<node color="Green" label="Discipline">
+   <type name="GeneralPart/Discipline"/>
+</node>
+
+<node color="Red">
+   <type name="GeneralPart/Phase"/>
+</node>
+
+<node color="White">
+   <type name="GeneralPart/Athlete"/>
+</node>
+
+<node label="BronzeMedal">
+   <type name="GeneralPart/BronzeMedal"/>
+</node>
+
+<node label="FemaleAthlete">
+   <type name="GeneralPart/FemaleAthlete"/>
+</node>
+
+<node label="GoldMedal">
+   <type name="GeneralPart/GoldMedal"/>
+</node>
+
+<node label="Location">
+   <type name="GeneralPart/Location"/>
+</node>
+
+<node label="MaleAthlete">
+   <type name="GeneralPart/MaleAthlete"/>
+</node>
+
+<node label="SilverMedal">
+   <type name="GeneralPart/SilverMedal"/>
+</node>
+
+<node shape="Hexagon">
+   <type name="Rank3Game"/>
+</node>
+
+<node shape="Inv Trapezoid">
+   <type name="SemiFinals"/>
+</node>
+
+<node shape="Parallelogram">
+   <type name="Finals"/>
+</node>
+
+<node shape="Trapezoid">
+   <type name="QuarterFinals"/>
+</node>
+
+<node visible="no">
+   <type name="GeneralPart/Medal"/>
+</node>
+
+<node visible="no" label="Country">
+   <type name="GeneralPart/Country"/>
+</node>
+
+<node visible="no" label="Score">
+   <type name="GeneralPart/Score"/>
+</node>
+
+<node visible="no" label="Time">
+   <type name="GeneralPart/Time"/>
+</node>
+
+<node visible="yes">
+   <type name="IceHockey"/>
+   <type name="IceHockeyTournament"/>
+   <type name="OneVOneGame"/>
+   <type name="univ"/>
+</node>
+
+<edge visible="no">
+   <relation name="$static_instance_6_e"> <type name="GeneralPart/Medal"/> <type name="GeneralPart/Event"/> </relation>
+   <relation name="$static_instance_6_p"> <type name="GeneralPart/Team"/> <type name="GeneralPart/Performance"/> </relation>
+   <relation name="hasAthletes"> <type name="GeneralPart/Country"/> <type name="GeneralPart/Athlete"/> </relation>
+   <relation name="memberOf"> <type name="GeneralPart/Athlete"/> <type name="GeneralPart/Team"/> </relation>
+   <relation name="participant"> <type name="GeneralPart/Team"/> <type name="GeneralPart/Event"/> </relation>
+</edge>
+
+<edge visible="no" attribute="no">
+   <relation name="citizenOf"> <type name="GeneralPart/Athlete"/> <type name="GeneralPart/Country"/> </relation>
+</edge>
+
+<edge visible="no" attribute="yes">
+   <relation name="athletesOnIce"> <type name="GeneralPart/Team"/> <type name="GeneralPart/Athlete"/> </relation>
+   <relation name="awardMedals"> <type name="GeneralPart/Event"/> <type name="GeneralPart/Medal"/> </relation>
+   <relation name="composedOfScore"> <type name="GeneralPart/Performance"/> <type name="GeneralPart/Score"/> </relation>
+   <relation name="endTime"> <type name="GeneralPart/Performance"/> <type name="GeneralPart/Time"/> </relation>
+   <relation name="hasMedal"> <type name="GeneralPart/Team"/> <type name="GeneralPart/Medal"/> </relation>
+   <relation name="represents"> <type name="GeneralPart/Team"/> <type name="GeneralPart/Country"/> </relation>
+   <relation name="startTime"> <type name="GeneralPart/Performance"/> <type name="GeneralPart/Time"/> </relation>
+   <relation name="winner"> <type name="GeneralPart/Performance"/> <type name="GeneralPart/Team"/> </relation>
+</edge>
+
+</view>
+
+</alloy>
