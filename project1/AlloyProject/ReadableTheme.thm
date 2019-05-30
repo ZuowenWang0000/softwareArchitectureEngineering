@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view>
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <type name="BronzeMedal"/>
+   <type name="FemaleAthlete"/>
+   <type name="GoldMedal"/>
+   <type name="Int"/>
+   <type name="Location"/>
+   <type name="MaleAthlete"/>
+   <type name="SilverMedal"/>
+   <type name="String"/>
+   <type name="univ"/>
+   <type name="ordering/Ord"/>
+   <type name="seq/Int"/>
+</node>
+
+<node color="Black">
+   <type name="Performance"/>
+</node>
+
+<node color="Blue">
+   <type name="Event"/>
+</node>
+
+<node color="Gray">
+   <type name="Team"/>
+</node>
+
+<node color="Green">
+   <type name="Discipline"/>
+</node>
+
+<node color="Red">
+   <type name="Phase"/>
+</node>
+
+<node color="White">
+   <type name="Athlete"/>
+</node>
+
+<node visible="no">
+   <type name="Country"/>
+   <type name="Medal"/>
+   <type name="Score"/>
+   <type name="Time"/>
+</node>
+
+<edge visible="no">
+   <relation name="$static_instance_3_p"> <type name="Team"/> <type name="Performance"/> </relation>
+   <relation name="hasAthletes"> <type name="Country"/> <type name="Athlete"/> </relation>
+   <relation name="hasParticipatingTeam"> <type name="Event"/> <type name="Team"/> </relation>
+   <relation name="memberOf"> <type name="Athlete"/> <type name="Team"/> </relation>
+   <relation name="participant"> <type name="Team"/> <type name="Event"/> </relation>
+</edge>
+
+<edge visible="no" attribute="yes">
+   <relation name="citizenOf"> <type name="Athlete"/> <type name="Country"/> </relation>
+   <relation name="composedOfScore"> <type name="Performance"/> <type name="Score"/> </relation>
+   <relation name="endTime"> <type name="Performance"/> <type name="Time"/> </relation>
+   <relation name="hasMedal"> <type name="Team"/> <type name="Medal"/> </relation>
+   <relation name="represents"> <type name="Team"/> <type name="Country"/> </relation>
+   <relation name="startTime"> <type name="Performance"/> <type name="Time"/> </relation>
+   <relation name="successor"> <type name="Phase"/> <type name="Phase"/> </relation>
+</edge>
+
+</view>
+
+</alloy>
